@@ -16,6 +16,8 @@ Das Beispiel erstellt ein temporäres echtes Git-Repo mit einer kaputten Additio
 
 ## Mit deinem Coding-Agenten
 
+**[Copy-paste-Auftrag für dein Projekt](START-HERE.md):** In deinen Coding-Agenten einfügen, Requirement ergänzen und mit der tatsächlichen Projektprüfung starten.
+
 Die Skills liegen unter `.agents/skills/evo-start`, `evo-build`, `evo-check`, `evo-change`, `evo-finish`, `evo-critic` im Repository. [Installation und echte Codex-/Claude-Aufrufe](INTEGRATION.md).
 
 - **start:** Nutzerziel, Anforderungen mit IDs, Nichtziele und vertrauenswürdige lokale Prüfkommandos festlegen.
