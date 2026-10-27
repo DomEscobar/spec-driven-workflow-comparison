@@ -1,0 +1,64 @@
+{
+  "observed_at_utc": "2026-10-27T10:30:15.057415+00:00",
+  "python": "3.13.5",
+  "platform": "Linux/aarch64",
+  "tests_run": 33,
+  "runs": [
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_all_input_versions_invalidate (test_sdd_gate.GateTests.test_all_input_versions_invalidate) ... ok\ntest_authorized_spec_still_requires_fresh_evidence (test_sdd_gate.GateTests.test_authorized_spec_still_requires_fresh_evidence) ... ok\ntest_blocked_cannot_accept (test_sdd_gate.GateTests.test_blocked_cannot_accept) ... ok\ntest_cli_positive_and_negative (test_sdd_gate.GateTests.test_cli_positive_and_negative) ... ok\ntest_deletion_out_of_scope (test_sdd_gate.GateTests.test_deletion_out_of_scope) ... ok\ntest_duplicate_check (test_sdd_gate.GateTests.test_duplicate_check) ... ok\ntest_duplicate_json_keys_reject (test_sdd_gate.GateTests.test_duplicate_json_keys_reject) ... ok\ntest_empty_discovery (test_sdd_gate.GateTests.test_empty_discovery) ... ok\ntest_identity_mismatch_not_authentication (test_sdd_gate.GateTests.test_identity_mismatch_not_authentication) ... ok\ntest_incomplete_discovery (test_sdd_gate.GateTests.test_incomplete_discovery) ... ok\ntest_invalid_phase (test_sdd_gate.GateTests.test_invalid_phase) ... ok\ntest_missing_check (test_sdd_gate.GateTests.test_missing_check) ... ok\ntest_missing_deliverable (test_sdd_gate.GateTests.test_missing_deliverable) ... ok\ntest_no_progress_and_unknown_budget (test_sdd_gate.GateTests.test_no_progress_and_unknown_budget) ... ok\ntest_old_worker_generation (test_sdd_gate.GateTests.test_old_worker_generation) ... ok\ntest_oracle_mutation_with_reforged_bindings (test_sdd_gate.GateTests.test_oracle_mutation_with_reforged_bindings) ... ok\ntest_out_of_scope (test_sdd_gate.GateTests.test_out_of_scope) ... ok\ntest_path_escape (test_sdd_gate.GateTests.test_path_escape) ... ok\ntest_raw_whitespace_change_is_not_normalized (test_sdd_gate.GateTests.test_raw_whitespace_change_is_not_normalized) ... ok\ntest_repair_budget_bound (test_sdd_gate.GateTests.test_repair_budget_bound) ... ok\ntest_required_checks_cannot_be_removed (test_sdd_gate.GateTests.test_required_checks_cannot_be_removed) ... ok\ntest_review_missing (test_sdd_gate.GateTests.test_review_missing) ... ok\ntest_scope_mutation (test_sdd_gate.GateTests.test_scope_mutation) ... ok\ntest_stale_code (test_sdd_gate.GateTests.test_stale_code) ... ok\ntest_stale_developer_tests (test_sdd_gate.GateTests.test_stale_developer_tests) ... ok\ntest_stale_integration (test_sdd_gate.GateTests.test_stale_integration) ... ok\ntest_stale_spec (test_sdd_gate.GateTests.test_stale_spec) ... ok\ntest_task_checkbox_not_evidence (test_sdd_gate.GateTests.test_task_checkbox_not_evidence) ... ok\ntest_terminal_mutation (test_sdd_gate.GateTests.test_terminal_mutation) ... ok\ntest_unknown_effect (test_sdd_gate.GateTests.test_unknown_effect) ... ok\ntest_unknown_fail_skip_error (test_sdd_gate.GateTests.test_unknown_fail_skip_error) ... ok\ntest_valid_alternative_with_fresh_evidence (test_sdd_gate.GateTests.test_valid_alternative_with_fresh_evidence) ... ok\ntest_valid_not_released (test_sdd_gate.GateTests.test_valid_not_released) ... ok\n\n----------------------------------------------------------------------\nRan 33 tests in 0.154s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/sdd_gate.py",
+        "--demo",
+        "--approved",
+        "fixtures/approved.json",
+        "--current",
+        "fixtures/current.json",
+        "--evidence",
+        "fixtures/evidence.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"assurance\": \"synthetic-consistency-only\", \"eligible\": true, \"reason_codes\": [], \"released\": false, \"state\": \"ACCEPTED\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/sdd_gate.py",
+        "--demo",
+        "--approved",
+        "fixtures/approved.json",
+        "--current",
+        "fixtures/stale-current.json",
+        "--evidence",
+        "fixtures/evidence.json"
+      ],
+      "exit_code": 3,
+      "stdout": "{\"assurance\": \"synthetic-consistency-only\", \"eligible\": false, \"reason_codes\": [\"STALE_EVIDENCE\", \"TERMINAL_STATE_MISMATCH\"], \"released\": false, \"state\": \"BLOCKED\"}\n",
+      "stderr": ""
+    }
+  ],
+  "input_sha256": {
+    "fixtures/approved.json": "2318f1172d330ddcd4f1aa8505bddc76c9568a74ac4483e2bc3fb93d3255f7a0",
+    "fixtures/current.json": "5e13026803ff50c9b4ad02803c02646f44cf3ef8e932fbe0d140e5c9e0d283d6",
+    "fixtures/evidence.json": "aa24764221cc16c3388033f9d2384b102805cf059ed49de824cc97bf42bd2de5",
+    "fixtures/stale-current.json": "e92c21ac6e45a1aa9d0ca394f0ca7a75d8601677259497b28b111f1703468200",
+    "scripts/sdd_gate.py": "eca17828a21938ff8be654c07201b69fa171e2ecd93668bd223134b49cb97ce9",
+    "scripts/verify_package.py": "ce4242c2eee4bcae17fb5122d28762653f61c4496f8e2d8b7e8ba49a183fb6bd",
+    "tests/test_sdd_gate.py": "5e2b1cdd5a57a816a90e8960fc9d876e16cbcff63aa254d02507a57e8e108b48"
+  },
+  "scope": "Actual validator execution on synthetic fixtures; not application or pipeline execution"
+}

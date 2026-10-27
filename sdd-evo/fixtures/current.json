@@ -1,0 +1,55 @@
+{
+  "schema": 1,
+  "phase": "VERIFYING",
+  "status": "active",
+  "generation": 2,
+  "effect_outcome": "none",
+  "contract": {
+    "id": "synthetic-export",
+    "revision": 2,
+    "scope": [
+      "src/export.py",
+      "src/cli.py",
+      "docs/help.md",
+      "tests/dev.py"
+    ],
+    "required_checks": [
+      "privacy",
+      "entrypoint",
+      "ux"
+    ],
+    "intent": "Only explicitly public items; no publication"
+  },
+  "spec": "R1 public only; R2 missing/unknown denied; R3 CLI and clear help; R4 no network",
+  "oracle": "independently authorized synthetic acceptance-v2",
+  "policy": "no external effects; protected oracle",
+  "environment": {
+    "python": "fixture-runtime-v1",
+    "dependencies": "stdlib",
+    "services": "none"
+  },
+  "commands": {
+    "acceptance-v1": "fixture command v1",
+    "cli-v1": "fixture CLI v1",
+    "review-v1": "fixture reviewer rubric v1"
+  },
+  "config": {
+    "network": false
+  },
+  "instructions": "fixture builder instructions v1",
+  "base": {
+    "src/export.py": "old implementation",
+    "src/cli.py": "old CLI",
+    "docs/help.md": "old help"
+  },
+  "candidate": {
+    "src/export.py": "public allowlist candidate",
+    "src/cli.py": "wired CLI",
+    "docs/help.md": "clear help"
+  },
+  "integration": {
+    "src/export.py": "public allowlist candidate",
+    "src/cli.py": "wired CLI",
+    "docs/help.md": "clear help"
+  }
+}

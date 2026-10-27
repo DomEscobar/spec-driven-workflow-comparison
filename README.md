@@ -8,6 +8,12 @@ OpenSpec organisiert **Änderungen an dauerhaft gepflegten System-Spezifikatione
 
 **Stand:** 27.10.2026. Beide offiziellen Repository-HEADs wurden per Git ermittelt und Quellen am exakten Commit gelesen. **Keine Installation, keine Produktbenchmark-Ausführung.** [Quellen und Pins](sources.md) · [Tatsächlich ausgeführte Prüfungen](docs/verification.md)
 
+## Eigener Entwurf: SDD-evo Framework
+
+[SDD-evo](sdd-evo/README.md) ergänzt diesen Vergleich um unseren eigenen evidenzgebundenen Loop: autorisierter Auftrag → begrenzte Umsetzung → Gesamtintegration → versionsgebundene Abnahme → Reparatur, explizite Auftragsänderung oder Abschluss. Release und Framework-Evolution bleiben getrennte Schleifen.
+
+Enthalten sind [Zustände und Flow](sdd-evo/FRAMEWORK.md), [Artefakte](sdd-evo/ARTIFACTS.md), [Dreiervergleich](sdd-evo/COMPARISON.md), [durchgängiges Beispiel](sdd-evo/EXAMPLE.md), [Evidenz](sdd-evo/EVIDENCE.md) und ein [ausgeführter Prüfprototyp](sdd-evo/docs/VERIFICATION.md). **Design und Konsistenzdemonstrator, keine produktionsfertige Runtime oder nachgewiesene Überlegenheit.**
+
 ## Die Matrix auf einen Blick
 
 **Gut** = Vorteil unter der genannten Bedingung. **Bedingt** = Nutzen hängt von Arbeitsweise und Pflege ab. **Schlecht als …** = ungeeigneter Einsatz, nicht pauschal schlechtes Produkt. Bewertungen sind unsere Ableitung aus den verlinkten Mechanismen.

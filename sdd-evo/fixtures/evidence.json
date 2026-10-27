@@ -1,0 +1,73 @@
+{
+  "schema": 1,
+  "producer": "fixture-runner",
+  "reviewer": "fixture-reviewer",
+  "decision": "approve",
+  "binding": {
+    "contract": "499d8c07bd9e0e93fea9c213623eff6c41547bf9be02fad5abcc0f096e7689cb",
+    "spec": "d2507e9a56cd531f4e1e46e62a975b87e5ac4d74c3d232785f5c718bcff10fc7",
+    "oracle": "c3c8bc9ad8458bc0e7ff8c99674f632bf0786c8f01dddcf811e32d82f3cd3ea1",
+    "policy": "380d51aae00f771830d354bc0c7e97f62dc6a050d99564d60af94e4d5e01e4cf",
+    "environment": "622aefc655012d754892304b252ae2d9f70ed139491172d3f38f715746736904",
+    "commands": "71d3fb00a2c9cca0aea18f19ffe3cab48bec50e023ee2c72cb29a8e64c9e0ea5",
+    "config": "cc4add20ce1fa7d048c82aef41fbe0219d7fb8f699057856723549f06eb1163f",
+    "instructions": "c3e5b1ea487410b21b1029737d8805295c4ddbb37251e2c21ec5205585354159",
+    "base": "8798b0e62ff7043fedda6d67c3f35992c19ade5bbaacc323e91e5d8d4d7f646b",
+    "candidate": "fe751844f5489a041a6916dfcc175f0c5b3b06efe283736c93c5d56aa0e6bfd9",
+    "integration": "fe751844f5489a041a6916dfcc175f0c5b3b06efe283736c93c5d56aa0e6bfd9",
+    "generation": 2
+  },
+  "terminal_binding": {
+    "contract": "499d8c07bd9e0e93fea9c213623eff6c41547bf9be02fad5abcc0f096e7689cb",
+    "spec": "d2507e9a56cd531f4e1e46e62a975b87e5ac4d74c3d232785f5c718bcff10fc7",
+    "oracle": "c3c8bc9ad8458bc0e7ff8c99674f632bf0786c8f01dddcf811e32d82f3cd3ea1",
+    "policy": "380d51aae00f771830d354bc0c7e97f62dc6a050d99564d60af94e4d5e01e4cf",
+    "environment": "622aefc655012d754892304b252ae2d9f70ed139491172d3f38f715746736904",
+    "commands": "71d3fb00a2c9cca0aea18f19ffe3cab48bec50e023ee2c72cb29a8e64c9e0ea5",
+    "config": "cc4add20ce1fa7d048c82aef41fbe0219d7fb8f699057856723549f06eb1163f",
+    "instructions": "c3e5b1ea487410b21b1029737d8805295c4ddbb37251e2c21ec5205585354159",
+    "base": "8798b0e62ff7043fedda6d67c3f35992c19ade5bbaacc323e91e5d8d4d7f646b",
+    "candidate": "fe751844f5489a041a6916dfcc175f0c5b3b06efe283736c93c5d56aa0e6bfd9",
+    "integration": "fe751844f5489a041a6916dfcc175f0c5b3b06efe283736c93c5d56aa0e6bfd9",
+    "generation": 2
+  },
+  "findings": [],
+  "checks": [
+    {
+      "id": "privacy",
+      "command": "acceptance-v1",
+      "status": "pass",
+      "exit_code": 0,
+      "observations": [
+        "public",
+        "private",
+        "unknown",
+        "missing",
+        "mixed"
+      ],
+      "witness": "SYNTHETIC expected observation, not an execution attestation"
+    },
+    {
+      "id": "entrypoint",
+      "command": "cli-v1",
+      "status": "pass",
+      "exit_code": 0,
+      "observations": [
+        "export-cli"
+      ],
+      "witness": "SYNTHETIC expected observation, not an execution attestation"
+    },
+    {
+      "id": "ux",
+      "command": "review-v1",
+      "status": "pass",
+      "exit_code": 0,
+      "observations": [
+        "help",
+        "empty-result",
+        "no-leaking-errors"
+      ],
+      "witness": "SYNTHETIC expected observation, not an execution attestation"
+    }
+  ]
+}

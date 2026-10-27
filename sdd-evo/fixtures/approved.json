@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "pins": {
+    "contract": "499d8c07bd9e0e93fea9c213623eff6c41547bf9be02fad5abcc0f096e7689cb",
+    "spec": "d2507e9a56cd531f4e1e46e62a975b87e5ac4d74c3d232785f5c718bcff10fc7",
+    "oracle": "c3c8bc9ad8458bc0e7ff8c99674f632bf0786c8f01dddcf811e32d82f3cd3ea1",
+    "policy": "380d51aae00f771830d354bc0c7e97f62dc6a050d99564d60af94e4d5e01e4cf"
+  },
+  "scope": [
+    "src/export.py",
+    "src/cli.py",
+    "docs/help.md",
+    "tests/dev.py"
+  ],
+  "deliverables": [
+    "src/export.py",
+    "src/cli.py",
+    "docs/help.md"
+  ],
+  "checks": {
+    "privacy": {
+      "kind": "test",
+      "command": "acceptance-v1",
+      "observations": [
+        "public",
+        "private",
+        "unknown",
+        "missing",
+        "mixed"
+      ]
+    },
+    "entrypoint": {
+      "kind": "test",
+      "command": "cli-v1",
+      "observations": [
+        "export-cli"
+      ]
+    },
+    "ux": {
+      "kind": "review",
+      "command": "review-v1",
+      "observations": [
+        "help",
+        "empty-result",
+        "no-leaking-errors"
+      ]
+    }
+  },
+  "runner": "fixture-runner",
+  "reviewer": "fixture-reviewer"
+}

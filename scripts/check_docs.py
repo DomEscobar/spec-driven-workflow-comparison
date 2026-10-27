@@ -87,7 +87,7 @@ def check(root=ROOT, network=False):
                 if parsed.scheme:
                     if parsed.scheme != 'https' or any(x in parsed.netloc for x in ('example.com', 'example.org', 'localhost')):
                         errors.append(f'{relative}:{number}: unsupported or placeholder URL')
-                    if 'github.com/' in href and '/blob/' in href and not PIN.fullmatch(href):
+                    if parsed.netloc == 'github.com' and '/blob/' in parsed.path and not re.fullmatch(r'/[^/]+/[^/]+/blob/[0-9a-f]{40}/.+', parsed.path):
                         errors.append(f'{relative}:{number}: unpinned source link')
                     continue
                 target = (file.parent / unquote(parsed.path)).resolve() if parsed.path else file.resolve()
