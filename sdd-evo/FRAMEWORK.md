@@ -1,5 +1,7 @@
 # Zustände, Entscheidungen und Gültigkeit
 
+> **Einordnung:** Dieses Dokument beschreibt den ursprünglichen Design-/Demo-Stand. Der jetzt ausführbare, bewusst kleinere lokale MVP ist im [Quickstart](README.md) und [MVP-Prüfbericht](docs/MVP-VERIFICATION.md) abgegrenzt; der Entwurf ist nicht vollständig implementiert.
+
 [Übersicht](README.md) · **Normativer Entwurf, vorgeschlagen; nur der in ARTIFACTS beschriebene Ausschnitt ist implementiert.**
 
 ## 1. Gegenstand und Abschluss

@@ -1,5 +1,7 @@
 # Minimale Artefakte und Autorität
 
+> **Einordnung:** Dieses Dokument beschreibt den ursprünglichen Design-/Demo-Stand. Der jetzt ausführbare, bewusst kleinere lokale MVP ist im [Quickstart](README.md) und [MVP-Prüfbericht](docs/MVP-VERIFICATION.md) abgegrenzt; der Entwurf ist nicht vollständig implementiert.
+
 [Übersicht](README.md) · **Vorgeschlagene Verträge; Demo-Untermenge unten ausdrücklich abgegrenzt.**
 
 ## 1. Eine maßgebliche Quelle pro Aussage

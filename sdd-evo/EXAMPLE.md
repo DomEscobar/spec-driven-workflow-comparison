@@ -1,5 +1,7 @@
 # Durchgehendes Beispiel: öffentlicher Katalogexport
 
+> **Einordnung:** Dieses Dokument beschreibt den ursprünglichen Design-/Demo-Stand. Der jetzt ausführbare, bewusst kleinere lokale MVP ist im [Quickstart](README.md) und [MVP-Prüfbericht](docs/MVP-VERIFICATION.md) abgegrenzt; der Entwurf ist nicht vollständig implementiert.
+
 [Übersicht](README.md) · **Vollständig synthetisches Entwurfsbeispiel.** Keine privaten Daten, kein realer Export und keine Veröffentlichung. Die dargestellten Anwendungstests/Worker/Releaseereignisse sind illustrative Sollabläufe, nicht ausgeführte Pipelinebelege. Tatsächlich ausgeführt wurde nur der Fixture-Validator in [VERIFICATION](docs/VERIFICATION.md).
 
 ## 1. Auftrag und erster Vertrag

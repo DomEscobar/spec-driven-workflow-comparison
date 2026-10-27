@@ -1,5 +1,7 @@
 # Evidenz, Ableitung und Grenzen
 
+> **Einordnung:** Dieses Dokument beschreibt den ursprünglichen Design-/Demo-Stand. Der jetzt ausführbare, bewusst kleinere lokale MVP ist im [Quickstart](README.md) und [MVP-Prüfbericht](docs/MVP-VERIFICATION.md) abgegrenzt; der Entwurf ist nicht vollständig implementiert.
+
 [Übersicht](README.md) · Quellenstand der abgeschlossenen Recherche: **2026-10-27**. Diese Konsolidierung erweitert die Recherche nicht. Die öffentlichen Quellen wurden in den vorangehenden Workstreams geprüft; hier wurden deren vollständige Reports und Inventare ausgewertet. Kein neuer Frameworklauf oder Paperbenchmark wird behauptet.
 
 ## Claim-Regeln

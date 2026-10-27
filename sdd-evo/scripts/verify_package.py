@@ -14,7 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def main():
     commands = [
-        [sys.executable, '-m', 'unittest', 'discover', '-s', 'tests', '-v'],
+        [sys.executable, '-m', 'unittest', 'discover', '-s', 'tests', '-p', 'test_sdd_gate.py', '-v'],
         [sys.executable, 'scripts/sdd_gate.py', '--demo', '--approved', 'fixtures/approved.json',
          '--current', 'fixtures/current.json', '--evidence', 'fixtures/evidence.json'],
         [sys.executable, 'scripts/sdd_gate.py', '--demo', '--approved', 'fixtures/approved.json',

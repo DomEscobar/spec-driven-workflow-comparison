@@ -1,5 +1,7 @@
 # OpenSpec, Spec Kit und Evidence-bound SDD
 
+> **Einordnung:** Dieses Dokument beschreibt den ursprünglichen Design-/Demo-Stand. Der jetzt ausführbare, bewusst kleinere lokale MVP ist im [Quickstart](README.md) und [MVP-Prüfbericht](docs/MVP-VERIFICATION.md) abgegrenzt; der Entwurf ist nicht vollständig implementiert.
+
 [Übersicht](README.md) · Produktbefunde beziehen sich auf [S01/S02](EVIDENCE.md), nicht jede Version oder Erweiterung. **Die dritte Spalte ist unser vorgeschlagener Entwurf**, kein gleichwertig fertiges Produkt und kein gemessener Sieger.
 
 ## Drei Flows
