@@ -4,8 +4,8 @@ description: Finish SDD-evo only with fresh checks and explicit manual review.
 ---
 # evo-finish
 
-1. Inspect current diff against requirements and non-goals. Get actual domain/UX reviewer findings; do not impersonate the human or claim objective UX evaluation. Write a nonempty repository-relative note (for example `review.md`) with requirements covered, observed outcome, reviewer, unresolved concerns and any UI applicability.
-2. Run `python3 sdd-evo/evo.py check` after the note or any other source edits. Then record the real review with `python3 sdd-evo/evo.py review --by REVIEWER --evidence review.md`.
+1. Inspect current diff against requirements and non-goals. If a critique package is pending, import the actual fresh critic result **before any source or review-note edits**; otherwise those edits make import stale. If critique is enabled but not yet prepared, run a passing check, prepare and obtain a fresh critic result first; see `sdd-evo/docs/CRITIQUE.md`. Never fabricate this result.
+2. Reproduce findings and repair only authorized code. Get actual domain/UX reviewer findings; do not impersonate the human or claim objective UX evaluation. Write a nonempty repository-relative note (for example `review.md`) with requirements covered, observed outcome, reviewer, unresolved concerns and any UI applicability. Batch repair and note edits, then run `python3 sdd-evo/evo.py check`. If critique is enabled, dispose **all** findings against final receipt.identity using `critique-dispose --by REVIEWER --evidence .sdd/dispositions.json`. Significant unresolved findings block finish; a critic cannot accept. Then record the real review with `python3 sdd-evo/evo.py review --by REVIEWER --evidence review.md`.
 3. Run `python3 sdd-evo/evo.py finish`. Report ACCEPTED_LOCAL only on exit 0. Pending review is a blocker and must not be bypassed. Future code/spec/config changes invalidate current acceptance.
 4. Summarize actual commands, test totals, changed files, review scope and limitations. Finish never deploys, merges, releases, or authenticates a reviewer.
 

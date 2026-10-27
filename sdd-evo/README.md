@@ -2,7 +2,7 @@
 
 **Ein lokaler Workflow für Coding-Agenten:** Auftrag festhalten → Code bauen → echte Tests ausführen → manuellen Review dokumentieren → genau diesen Stand abschließen. Änderungen machen alte Nachweise ungültig.
 
-**Jetzt implementiert:** Python-CLI, echte Subprocess-Tests, versionsgebundene lokale Belege und fünf portable Agent-Skills. **MVP, kein geschütztes CI-Gate:** Builder und Runner haben denselben Benutzer; das ist keine authentifizierte Attestation. `finish` bedeutet lokale Abnahme, niemals Deployment oder Release.
+**Jetzt implementiert:** Python-CLI, echte Subprocess-Tests, versionsgebundene lokale Belege und sechs portable Agent-Skills. **MVP, kein geschütztes CI-Gate:** Builder und Runner haben denselben Benutzer; das ist keine authentifizierte Attestation. `finish` bedeutet lokale Abnahme, niemals Deployment oder Release.
 
 ## In einer Minute ausprobieren
 
@@ -16,7 +16,7 @@ Das Beispiel erstellt ein temporäres echtes Git-Repo mit einer kaputten Additio
 
 ## Mit deinem Coding-Agenten
 
-Die Skills liegen unter `.agents/skills/evo-start`, `evo-build`, `evo-check`, `evo-change`, `evo-finish` im Repository. [Installation und echte Codex-/Claude-Aufrufe](INTEGRATION.md).
+Die Skills liegen unter `.agents/skills/evo-start`, `evo-build`, `evo-check`, `evo-change`, `evo-finish`, `evo-critic` im Repository. [Installation und echte Codex-/Claude-Aufrufe](INTEGRATION.md).
 
 - **start:** Nutzerziel, Anforderungen mit IDs, Nichtziele und vertrauenswürdige lokale Prüfkommandos festlegen.
 - **build:** Der Agent implementiert echten Code. Die CLI selbst ruft kein LLM auf.
@@ -28,7 +28,7 @@ Nicht „Test rot → Anforderung leichter machen“, sondern Fehler beheben ode
 
 ## Quickstart im eigenen Repo
 
-Kopiere `sdd-evo/evo.py` nach `sdd-evo/evo.py` deines Ziel-Repos; für Agentennutzung zusätzlich die fünf Skill-Verzeichnisse nach `.agents/skills/`. Keine globalen Agenteneinstellungen ändern. Das Ziel braucht bereits einen Git-Commit. Ergänze `.sdd/` in seiner `.gitignore`; der Runner verweigert sonst die Arbeit. Ignoriere dort auch normale Build-/Cache-Ausgaben, **nicht** relevante Quelldateien.
+Kopiere `sdd-evo/evo.py` nach `sdd-evo/evo.py` deines Ziel-Repos; für Agentennutzung zusätzlich die sechs Skill-Verzeichnisse nach `.agents/skills/`. Keine globalen Agenteneinstellungen ändern. Das Ziel braucht bereits einen Git-Commit. Ergänze `.sdd/` in seiner `.gitignore`; der Runner verweigert sonst die Arbeit. Ignoriere dort auch normale Build-/Cache-Ausgaben, **nicht** relevante Quelldateien.
 
 Alle folgenden Befehle laufen am Ziel-Repo-Root:
 
@@ -78,6 +78,14 @@ python3 sdd-evo/evo.py check
 ```
 
 Neue Contract-/Config-/Spec-/Test-Digests invalidieren Receipt, Review und Finish. Historie und kumulative Versuche bleiben in `.sdd/state.json`. Namen und Gründe sind lokale Zuschreibungen, keine unabhängige Autorisierung. Keine automatische Specmutation; kein Reset durch Start über einen laufenden Change.
+
+## Optional: frischer Critic vor dem Abschluss
+
+Für semantische Lücken trotz grüner Tests: Original-Nutzerbrief + Vertrag + exakte Quelle/Diff → frischer Critic → strukturierte Findings → Builder-Repair → finale Tests, Findings-Disposition und manueller Review. **Kein Modellaufruf durch die CLI, keine automatische Abnahme.**
+
+Aktiviere `critique.enabled` mit autorisiertem `task_brief` und getrennten Review-/Repairbudgets vor `start` oder per explizitem Amendment. Dann `critique-prepare`, neue `$evo-critic`-/`/evo-critic`-Sitzung, `critique-import` und `critique-dispose`. Nach Prepare ist Abschalten/Amendment im laufenden Change blockiert; offene Findings lassen sich nicht wegschalten.
+
+[Ausführbare Befehle, Formate und Grenzen](docs/CRITIQUE.md). Modellfreier Ablaufcheck: `python3 sdd-evo/examples/run_critique_e2e.py`. Dieser verwendet geskriptete Critic-Fixtures, keinen echten unabhängigen Review. Read-only ist beratend, nicht host-erzwungen.
 
 ## Was wird gebunden?
 

@@ -4,6 +4,18 @@
 
 [Übersicht](README.md) · Quellenstand der abgeschlossenen Recherche: **2026-10-27**. Diese Konsolidierung erweitert die Recherche nicht. Die öffentlichen Quellen wurden in den vorangehenden Workstreams geprüft; hier wurden deren vollständige Reports und Inventare ausgewertet. Kein neuer Frameworklauf oder Paperbenchmark wird behauptet.
 
+## Ergänzung: begrenzter unabhängiger Critic (S13)
+
+**Öffentliche Primärquelle:** Zhengxin Zhang, Erkang Zhu, Yin Lin, Claire Cardie, Bolin Ding, Jingren Zhou, *Rethinking Verification in Agent Harnesses*, [2610.34577v1 HTML](https://arxiv.org/html/2610.34577v1), [PDF](https://arxiv.org/pdf/2610.34577v1), [TeX-Quellarchiv](https://arxiv.org/src/2610.34577v1), 25. Oktober 2026. Diese Ergänzung übernimmt den vollständigen v1-Review (65 Seiten inkl. Appendices A–E, originale TeX-Tabellen und Baseline-Gegenprüfung), keine neue Benchmarkreproduktion. PDF-SHA256: `83dc9f397c7520c42ab29f50291162ba08835dc8caa5b090156349039cf1436a`.
+
+**Befund → Entscheidung:** L3 verwendet einen frischen Critic mit Originalaufgabe, Diff und Live-Sandbox; Task-first/Changes liefert einen kleinen übertragbaren Kontextkandidaten. Deshalb ein optionaler, providerneutraler `critique-prepare/import/dispose`-Pfad nach bestandenen Maschinenchecks, getrennte begrenzte Review-/Repairzähler und konkrete Findings. Das ist unsere Engineeringentscheidung, kein nachgewiesen optimaler Default. Der Standardlauf des Papers akzeptiert die nächste Builder-Reparatur ohne erneuten Critic; **unser Adapter verschärft das durch finale echte Pflichtchecks, subjectgebundene Disposition und weiterhin manuellen Review**. Paper-L2 ist erneutes Prompting bei Stop, nicht unser deterministischer Freshness-/Receipt-Gate; diese Gates bleiben erhalten.
+
+**Grenzen:** Autorenresultate auf gezielt ausgewählten TB-/SWE-Teilmengen sind keine Wirkungsmessung auf SDD-evo. Tatsächlich abgeschlossene Trialzahlen, vollständige Rohzellen/Exklusionen, Pairing und Budget-/Cacheaccounting fehlen; kein paper-eigener Runnercommit wurde im geprüften Suchumfang verifiziert. Das Quellarchiv enthält Manuskript/Plots, keine verifizierte Implementation. Drei konfigurierte Trials sind kein bestätigtes vollständiges Raster. TB-Baseline inkonsistent zwischen Armen: Figure 5 nennt 56,8 % bei Claim-guided/Changes statt 55,1 % sonst; für DeepSeek V4-Pro Figure 9 63,1 % statt 51,2 %, Figure 19 Outputbaseline 54,1k statt 43,8k. Ohne Erklärung keine streng gepaarte kausale Rangfolge oder übertragbare Effektgröße behaupten. Keine Konfidenzintervalle/Multiple-Comparison-Kontrolle, kein vollständiger Executor×Critic-Vergleich; ein Critic-Modell für sieben Executor-Modelle ist keine bewiesene Fehlerunabhängigkeit.
+
+Read-only im Paper ist promptseitig beschrieben, Hostdurchsetzung nicht verifiziert. Unser Skill ist ebenfalls ausdrücklich advisory, nicht Sandbox/Authentifizierung. VisualBench-Net-Preference ist keine Erfolgsquote; Rater-/Paircounts, Both-fail-Nenner und Unsicherheit bleiben unklar. Kein Codinggewinn wird auf UX übertragen. UI braucht weiterhin reale Interaktion und zuständige Fachbeurteilung. Die lokalen [Ablauftests](docs/CRITIQUE.md) verifizieren Mechanik mit geskripteten Critic-Fixtures, **keinen unabhängigen Modellreview, keine Paperreproduktion und keinen Produktivitätsgewinn**.
+
+Private Brain-Kuration wurde separat vorgenommen; hier stehen nur öffentliche Quellen und eigene Ableitungen, keine privaten Readbacks oder internen Wissensartefakte.
+
 ## Claim-Regeln
 
 - **Befund:** Was Primärtext oder begrenzte statische Codeinspektion tatsächlich sagt.

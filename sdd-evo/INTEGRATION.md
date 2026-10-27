@@ -4,7 +4,7 @@
 
 ## Codex CLI / IDE
 
-Die offiziellen [Codex-Skill-Dokumente](https://developers.openai.com/codex/skills) beschreiben Repo-Skills unter `.agents/skills/`, explizite Auswahl über `/skills` oder eine `$`-Skill-Erwähnung. Starte Codex im Ziel-Repo. Die fünf Dateien liegen hier bereits am richtigen Ort.
+Die offiziellen [Codex-Skill-Dokumente](https://developers.openai.com/codex/skills) beschreiben Repo-Skills unter `.agents/skills/`, explizite Auswahl über `/skills` oder eine `$`-Skill-Erwähnung. Starte Codex im Ziel-Repo. Die sechs Dateien liegen hier bereits am richtigen Ort.
 
 Beispiel **im Codex-Prompt**, nicht in deiner Shell:
 
@@ -22,10 +22,10 @@ Wenn Skills nicht erscheinen, `/skills` prüfen und gegebenenfalls die Sitzung n
 
 Die offiziellen [Claude-Code-Skill-Dokumente](https://code.claude.com/docs/en/skills) beschreiben Projekt-Skills unter `.claude/skills/<name>/SKILL.md` und direkte Aufrufe als `/skill-name`. `.agents/skills/` wird hier nicht als universell unterstützter Claude-Pfad behauptet.
 
-Kopiere die fünf Verzeichnisse einmalig **ohne bestehende Zielskills zu überschreiben**, vom Repo-Root:
+Kopiere die sechs Verzeichnisse einmalig **ohne bestehende Zielskills zu überschreiben**, vom Repo-Root:
 
 ```sh
-python3 -c 'from pathlib import Path; import shutil; src=Path(".agents/skills"); dst=Path(".claude/skills"); names=["evo-start","evo-build","evo-check","evo-change","evo-finish"]; assert all(not (dst/n).exists() for n in names), "destination exists; review manually"; dst.mkdir(parents=True, exist_ok=True); [shutil.copytree(src/n,dst/n) for n in names]'
+python3 -c 'from pathlib import Path; import shutil; src=Path(".agents/skills"); dst=Path(".claude/skills"); names=["evo-start","evo-build","evo-check","evo-change","evo-finish","evo-critic"]; assert all(not (dst/n).exists() for n in names), "destination exists; review manually"; dst.mkdir(parents=True, exist_ok=True); [shutil.copytree(src/n,dst/n) for n in names]'
 ```
 
 Dann **im Claude-Code-Prompt**:
@@ -39,6 +39,12 @@ Dann **im Claude-Code-Prompt**:
 ```
 
 `/evo:start` war eine illustrative frühere Schreibweise; sie ist **kein** hier installierter universeller Slash-Command. Keine Plugin-Namespace-Installation wird behauptet. Die kopierten Skills müssen bei Updates bewusst synchronisiert werden.
+
+## Frischer Critic (optional)
+
+Nach Aktivierung, echtem `check` und `critique-prepare`: **neue** Codex-Sitzung mit `$evo-critic Read .sdd/critique-package-1.json; write only .sdd/critic-result.json.` oder neue Claude-Sitzung mit `/evo-critic Read .sdd/critique-package-1.json; write only .sdd/critic-result.json.` Keine Builder-Historie übernehmen. [Kompletter Ablauf und Ergebnisformat](docs/CRITIQUE.md).
+
+Für eine eigenständige Installation kopiere neben `sdd-evo/evo.py` auch `sdd-evo/docs/CRITIQUE.md` und die verlinkten README-/Integrationsdokumente an ihre gleichen relativen Pfade; am einfachsten das ganze `sdd-evo/`-Paket ohne Caches/Artefakte. Die Critic-Skill allein ist keine Runtime oder Sandbox. Installation/Kopie vor dem Check, nicht während eines gepackten Reviews.
 
 ## Andere Agenten / ohne Agent
 
