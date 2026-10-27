@@ -1,0 +1,240 @@
+{
+  "retrieved_at_utc": "2026-10-27T06:49:54Z",
+  "pins": {
+    "openspec": {
+      "repository": "Fission-AI/OpenSpec",
+      "commit": "6d04a1b58dedc95729d34e4f223d9d483aae210a"
+    },
+    "spec-kit": {
+      "repository": "github/spec-kit",
+      "commit": "ee94598c3c87ae231027b22fb2be2b5a13e8820f"
+    }
+  },
+  "sources": [
+    {
+      "id": "O1",
+      "product": "openspec",
+      "path": "docs/commands.md",
+      "review_depth": "1-779",
+      "scope": "Kommandos, Syntaxvarianten, core/optional, sync/archive",
+      "status": "source-reviewed; not executed",
+      "url": "https://github.com/Fission-AI/OpenSpec/blob/6d04a1b58dedc95729d34e4f223d9d483aae210a/docs/commands.md"
+    },
+    {
+      "id": "O2",
+      "product": "openspec",
+      "path": "schemas/spec-driven/schema.yaml",
+      "review_depth": "1-272",
+      "scope": "Artefakte, Anforderungen, Szenarien, Abhängigkeiten",
+      "status": "source-reviewed; not executed",
+      "url": "https://github.com/Fission-AI/OpenSpec/blob/6d04a1b58dedc95729d34e4f223d9d483aae210a/schemas/spec-driven/schema.yaml"
+    },
+    {
+      "id": "O3",
+      "product": "openspec",
+      "path": "src/core/templates/workflows/archive-change.ts",
+      "review_depth": "1-240",
+      "scope": "Skill-Prompt, Bestätigungen, Sync und Verschieben; Command-Hälfte nicht geprüft",
+      "status": "source-reviewed; not executed",
+      "url": "https://github.com/Fission-AI/OpenSpec/blob/6d04a1b58dedc95729d34e4f223d9d483aae210a/src/core/templates/workflows/archive-change.ts"
+    },
+    {
+      "id": "O4",
+      "product": "openspec",
+      "path": "src/core/archive.ts",
+      "review_depth": "1296-2000",
+      "scope": "CLI-Validierung, Task-Bestätigung, Merge-Vorprüfung; kein Vollaudit",
+      "status": "source-reviewed; not executed",
+      "url": "https://github.com/Fission-AI/OpenSpec/blob/6d04a1b58dedc95729d34e4f223d9d483aae210a/src/core/archive.ts"
+    },
+    {
+      "id": "O5",
+      "product": "openspec",
+      "path": "src/core/templates/workflows/verify-change.ts",
+      "review_depth": "1-155",
+      "scope": "Advisory-Prüfung, drei Dimensionen, Evidenzgrenzen",
+      "status": "source-reviewed; not executed",
+      "url": "https://github.com/Fission-AI/OpenSpec/blob/6d04a1b58dedc95729d34e4f223d9d483aae210a/src/core/templates/workflows/verify-change.ts"
+    },
+    {
+      "id": "O6",
+      "product": "openspec",
+      "path": "docs/customization.md",
+      "review_depth": "1-190",
+      "scope": "Kontext, Regeln, advisory guidance, Schemas",
+      "status": "source-reviewed; not executed",
+      "url": "https://github.com/Fission-AI/OpenSpec/blob/6d04a1b58dedc95729d34e4f223d9d483aae210a/docs/customization.md"
+    },
+    {
+      "id": "O7",
+      "product": "openspec",
+      "path": "docs/cli.md",
+      "review_depth": "578-667",
+      "scope": "validate und archived-Scope",
+      "status": "source-reviewed; not executed",
+      "url": "https://github.com/Fission-AI/OpenSpec/blob/6d04a1b58dedc95729d34e4f223d9d483aae210a/docs/cli.md"
+    },
+    {
+      "id": "O8",
+      "product": "openspec",
+      "path": "docs/installation.md",
+      "review_depth": "Suche: Installation, Node, npm, Version",
+      "scope": "Installationswege; gezielte Textsuche, kein Installationsversuch",
+      "status": "source-reviewed; not executed",
+      "url": "https://github.com/Fission-AI/OpenSpec/blob/6d04a1b58dedc95729d34e4f223d9d483aae210a/docs/installation.md"
+    },
+    {
+      "id": "O9",
+      "product": "openspec",
+      "path": "docs-lab/README.md",
+      "review_depth": "1-130",
+      "scope": "Dokumentationsmigration und Website-Quelle",
+      "status": "source-reviewed; not executed",
+      "url": "https://github.com/Fission-AI/OpenSpec/blob/6d04a1b58dedc95729d34e4f223d9d483aae210a/docs-lab/README.md"
+    },
+    {
+      "id": "O10",
+      "product": "openspec",
+      "path": "docs-lab/start/quickstart.md",
+      "review_depth": "1-187",
+      "scope": "Aktueller Quickstart, Review, Archiv und Aufbewahrung",
+      "status": "source-reviewed; not executed",
+      "url": "https://github.com/Fission-AI/OpenSpec/blob/6d04a1b58dedc95729d34e4f223d9d483aae210a/docs-lab/start/quickstart.md"
+    },
+    {
+      "id": "O11",
+      "product": "openspec",
+      "path": "docs-lab/customize/profiles.md",
+      "review_depth": "1-88",
+      "scope": "Core und optionale Workflows; Profile und Delivery",
+      "status": "source-reviewed; not executed",
+      "url": "https://github.com/Fission-AI/OpenSpec/blob/6d04a1b58dedc95729d34e4f223d9d483aae210a/docs-lab/customize/profiles.md"
+    },
+    {
+      "id": "S1",
+      "product": "spec-kit",
+      "path": "docs/quickstart.md",
+      "review_depth": "1-181",
+      "scope": "Kompletter Quickstart einschließlich converge und Feature-State",
+      "status": "source-reviewed; not executed",
+      "url": "https://github.com/github/spec-kit/blob/ee94598c3c87ae231027b22fb2be2b5a13e8820f/docs/quickstart.md"
+    },
+    {
+      "id": "S2",
+      "product": "spec-kit",
+      "path": "templates/commands/converge.md",
+      "review_depth": "1-279",
+      "scope": "Append-only-Vertrag und vier Gap-Typen",
+      "status": "source-reviewed; not executed",
+      "url": "https://github.com/github/spec-kit/blob/ee94598c3c87ae231027b22fb2be2b5a13e8820f/templates/commands/converge.md"
+    },
+    {
+      "id": "S3",
+      "product": "spec-kit",
+      "path": "templates/commands/analyze.md",
+      "review_depth": "55-244",
+      "scope": "Read-only-Analyse, Coverage und Empfehlung statt Merge-Sperre",
+      "status": "source-reviewed; not executed",
+      "url": "https://github.com/github/spec-kit/blob/ee94598c3c87ae231027b22fb2be2b5a13e8820f/templates/commands/analyze.md"
+    },
+    {
+      "id": "S4",
+      "product": "spec-kit",
+      "path": "templates/commands/implement.md",
+      "review_depth": "55-209",
+      "scope": "Checklist-Gate, Zustimmung, Task-Ausführung und Hooks",
+      "status": "source-reviewed; not executed",
+      "url": "https://github.com/github/spec-kit/blob/ee94598c3c87ae231027b22fb2be2b5a13e8820f/templates/commands/implement.md"
+    },
+    {
+      "id": "S5",
+      "product": "spec-kit",
+      "path": "scripts/python/check_prerequisites.py",
+      "review_depth": "1-260",
+      "scope": "Datei-/Plan-Prüfungen; restliche Ausgabe nicht auditiert",
+      "status": "source-reviewed; not executed",
+      "url": "https://github.com/github/spec-kit/blob/ee94598c3c87ae231027b22fb2be2b5a13e8820f/scripts/python/check_prerequisites.py"
+    },
+    {
+      "id": "S6",
+      "product": "spec-kit",
+      "path": "scripts/python/common.py",
+      "review_depth": "79-190",
+      "scope": "Feature-State, Override, No-persist",
+      "status": "source-reviewed; not executed",
+      "url": "https://github.com/github/spec-kit/blob/ee94598c3c87ae231027b22fb2be2b5a13e8820f/scripts/python/common.py"
+    },
+    {
+      "id": "S7",
+      "product": "spec-kit",
+      "path": "docs/integrations/cli.md",
+      "review_depth": "1-190",
+      "scope": "Aufrufsyntax, Integrationen, Trust-Grenze",
+      "status": "source-reviewed; not executed",
+      "url": "https://github.com/github/spec-kit/blob/ee94598c3c87ae231027b22fb2be2b5a13e8820f/docs/integrations/cli.md"
+    },
+    {
+      "id": "S8",
+      "product": "spec-kit",
+      "path": "docs/guides/customization.md",
+      "review_depth": "1-119",
+      "scope": "Extensions, Presets, Overrides, Workflows und Bundles",
+      "status": "source-reviewed; not executed",
+      "url": "https://github.com/github/spec-kit/blob/ee94598c3c87ae231027b22fb2be2b5a13e8820f/docs/guides/customization.md"
+    },
+    {
+      "id": "S9",
+      "product": "spec-kit",
+      "path": "templates/plan-template.md",
+      "review_depth": "1-113",
+      "scope": "Plan, Constitution-Check, ergänzende Artefakte",
+      "status": "source-reviewed; not executed",
+      "url": "https://github.com/github/spec-kit/blob/ee94598c3c87ae231027b22fb2be2b5a13e8820f/templates/plan-template.md"
+    },
+    {
+      "id": "S10",
+      "product": "spec-kit",
+      "path": "templates/tasks-template.md",
+      "review_depth": "1-120",
+      "scope": "Story-Tasks, Parallelmarker, Tests optional",
+      "status": "source-reviewed; not executed",
+      "url": "https://github.com/github/spec-kit/blob/ee94598c3c87ae231027b22fb2be2b5a13e8820f/templates/tasks-template.md"
+    },
+    {
+      "id": "S11",
+      "product": "spec-kit",
+      "path": "templates/spec-template.md",
+      "review_depth": "1-131",
+      "scope": "Stories, FR, SC, Annahmen",
+      "status": "source-reviewed; not executed",
+      "url": "https://github.com/github/spec-kit/blob/ee94598c3c87ae231027b22fb2be2b5a13e8820f/templates/spec-template.md"
+    },
+    {
+      "id": "S12",
+      "product": "spec-kit",
+      "path": "templates/commands/constitution.md",
+      "review_depth": "Suche: constitution.md, Kontextzeilen 75-129",
+      "scope": "Zielpfad der Constitution; gezielte Prüfung",
+      "status": "source-reviewed; not executed",
+      "url": "https://github.com/github/spec-kit/blob/ee94598c3c87ae231027b22fb2be2b5a13e8820f/templates/commands/constitution.md"
+    },
+    {
+      "id": "S13",
+      "product": "spec-kit",
+      "path": "workflows/speckit/workflow.yml",
+      "review_depth": "1-74",
+      "scope": "Separater ausführbarer Workflow mit Review-Gates",
+      "status": "source-reviewed; not executed",
+      "url": "https://github.com/github/spec-kit/blob/ee94598c3c87ae231027b22fb2be2b5a13e8820f/workflows/speckit/workflow.yml"
+    },
+    {
+      "id": "S14",
+      "product": "spec-kit",
+      "path": "src/specify_cli/workflows/step/gate/__init__.py",
+      "review_depth": "1-190",
+      "scope": "Gate-Konfiguration, non-TTY PAUSED; kein Engine-End-to-End-Test",
+      "status": "source-reviewed; not executed",
+      "url": "https://github.com/github/spec-kit/blob/ee94598c3c87ae231027b22fb2be2b5a13e8820f/src/specify_cli/workflows/step/gate/__init__.py"
+    }
+  ]
+}
