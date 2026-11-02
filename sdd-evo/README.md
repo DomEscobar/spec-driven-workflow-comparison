@@ -16,6 +16,10 @@ python3 sdd-evo/examples/run_e2e.py
 
 Das Beispiel erstellt ein temporäres echtes Git-Repo mit einer kaputten Additionsfunktion und einem echten unittest. Es führt die CLI aus: Testfehler → Codefix → bestandener Test → exemplarischer lokaler Review → `ACCEPTED_LOCAL` → erneute Codeänderung → `STALE_EVIDENCE`. Das temporäre Repo wird entfernt. Der Beispielreview ist keine unabhängige menschliche Freigabe.
 
+## Geprüfte Ergänzungen
+
+- **[Elephant-Goldfish Model: vorerst nicht übernehmen](docs/EGM-ASSESSMENT.md)** — Quellaudit, unabhängige Gegenprüfung, konkrete Grenzen und Bedingungen für eine spätere Neubewertung. Keine Installation oder Änderung unseres Workflows.
+
 ## Mit deinem Coding-Agenten
 
 **[Copy-paste-Auftrag für dein Projekt](START-HERE.md):** In deinen Coding-Agenten einfügen, Requirement ergänzen und mit der tatsächlichen Projektprüfung starten.
