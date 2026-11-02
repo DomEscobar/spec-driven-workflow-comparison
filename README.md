@@ -10,6 +10,8 @@ OpenSpec organisiert **Änderungen an dauerhaft gepflegten System-Spezifikatione
 
 ## Eigener Workflow: SDD-evo MVP
 
+**Neu: [dauerhafte lokale Pipeline](sdd-evo/pipeline/README.md)** — Anforderung → isolierter Clone → Builder → echte Tests → frische Kritik → begrenzte Reparatur → PR-ready; optionale parentseitige GitHub-Oberfläche. Orchestrierung mit echten Git-/Testprozessen geprüft, Modell- und Live-PR-Nachweis ausdrücklich noch offen.
+
 [SDD-evo](sdd-evo/README.md) ergänzt diesen Vergleich um unseren eigenen evidenzgebundenen Loop: autorisierter Auftrag → begrenzte Umsetzung → Gesamtintegration → versionsgebundene Abnahme → Reparatur, explizite Auftragsänderung oder Abschluss. Release und Framework-Evolution bleiben getrennte Schleifen.
 
 Enthalten sind [Zustände und Flow](sdd-evo/FRAMEWORK.md), [Artefakte](sdd-evo/ARTIFACTS.md), [Dreiervergleich](sdd-evo/COMPARISON.md), [durchgängiges Beispiel](sdd-evo/EXAMPLE.md), [Evidenz](sdd-evo/EVIDENCE.md) und ein [ausgeführter Prüfprototyp](sdd-evo/docs/VERIFICATION.md). **Neu: [lauffähiger lokaler MVP mit Quickstart](sdd-evo/README.md), echtem Test-Runner und [portablen Coding-Agent-Skills](sdd-evo/INTEGRATION.md).** Der umfassendere Entwurf und die synthetische Demo bleiben getrennt; keine geschützte CI, produktionsfertige Runtime oder nachgewiesene Überlegenheit.

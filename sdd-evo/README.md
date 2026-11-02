@@ -6,6 +6,8 @@
 
 ## In einer Minute ausprobieren
 
+Für den dauerhaften Controller mit isoliertem Clone, Worker-Protokoll, begrenzter Reparatur und optionalem Draft-PR: **[Pipeline-Quickstart](pipeline/README.md)**. Das folgende manuelle Review-Verfahren bleibt unverändert; die Pipeline kennzeichnet Maschinenfreigabe separat.
+
 Voraussetzungen: POSIX-System (Linux/macOS), Python 3.10+, Git. Keine Pakete, Modelle, API-Schlüssel oder Netzwerkaufrufe. Vom Repository-Hauptverzeichnis:
 
 ```sh
